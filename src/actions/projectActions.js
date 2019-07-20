@@ -1,0 +1,10 @@
+// GET_PROJECTS_LIST, GET_PROJECTS_LIST_SUCCESS, GET_PROJECTS_LIST_FAILURE
+export const GET_PROJECTS_LIST = "GET_PROJECTS_LIST";
+export const GET_PROJECTS_LIST_SUCCESS = "GET_PROJECTS_LIST_SUCCESS";
+export const GET_PROJECTS_LIST_FAILURE = "GET_PROJECTS_LIST_FAILURE";
+
+export const getProjectsList = () => dispatch => {
+  dispatch({
+    type: GET_PROJECTS_LIST
+  });
+};
