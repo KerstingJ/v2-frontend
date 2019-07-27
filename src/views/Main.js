@@ -34,14 +34,19 @@ const Main = styled.main`
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     @media (max-width: 1000px) {
       padding: 20px 10px;
     }
 
     .con-block {
-      width: 48%;
+      width: 49%;
+    }
+
+    .blog-spotlight {
+      border-left: 1px solid lightgray;
+      padding-left: 1%;
     }
   }
 `;
