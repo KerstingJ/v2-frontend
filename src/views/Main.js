@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import Header from "../components/Header";
+import ProjectSpotlight from "../components/MainPage/ProjectSpotlight";
+import BlogSpotlight from "../components/MainPage/BlogSpotlight";
 import Footer from "../components/Footer";
 
 export default function(props) {
@@ -10,12 +12,10 @@ export default function(props) {
       <Header />
       <section className="content">
         <div className="con-block carousel">
-          This section is going to be a carousel to allow you to see a few
-          highlighted projects
+          <ProjectSpotlight />
         </div>
         <div className="con-block blog-spotlight">
-          This section is going to be a scrollable list of some recent blog
-          posts
+          <BlogSpotlight />
         </div>
       </section>
       <Footer />
@@ -30,10 +30,18 @@ const Main = styled.main`
     min-height: 50vh;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 0px;
+    padding: 20px 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1000px) {
+      padding: 20px 10px;
+    }
+
+    .con-block {
+      width: 48%;
+    }
   }
 `;
