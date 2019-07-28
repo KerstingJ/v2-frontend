@@ -16,11 +16,7 @@ export default function(props) {
     if (!doHover) {
       return;
     }
-    let element = event.target;
-    if (element.classList.length < 1) {
-      console.log("Made a switcherooo");
-      element = element.parentNode;
-    }
+    let element = event.currentTarget;
     let { top, left, height, width } = element.getBoundingClientRect();
 
     setDetailCoords({ top, left, height, width });
