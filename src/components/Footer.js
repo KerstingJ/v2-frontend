@@ -64,11 +64,11 @@ const Footer = styled.footer`
         }
         a {
           display: block;
-
+          color: orange;
           transition: all 0.35s ease;
 
           &:hover {
-            color: orange;
+            color: black;
           }
         }
       }

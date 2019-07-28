@@ -34,17 +34,17 @@ const Header = styled.header`
   a {
     font-size: 2rem;
     margin-left: 20px;
-    color: darkgray;
+    color: orange;
 
-    transition: all 0.35s ease;
+    transition: color 0.35s ease;
 
     &.active {
-      color: black;
+      color: orange;
       font-weight: bold;
     }
 
     &:hover {
-      color: orange;
+      color: black;
     }
   }
 `;
