@@ -40,8 +40,16 @@ const Main = styled.main`
       padding: 20px 10px;
     }
 
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+
     .con-block {
       width: 49%;
+
+      @media (max-width: 800px) {
+        width: 99%;
+      }
     }
 
     .blog-spotlight {

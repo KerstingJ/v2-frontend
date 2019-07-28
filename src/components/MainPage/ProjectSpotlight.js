@@ -37,7 +37,7 @@ function ProjectsPreview(props) {
     <ProjectCarousel>
       <div className="image-Container">
         {/* 
-            do a map on a list received from props
+            map on a list received from props
             when index of map === currentImage, 
             then set that ImageGroup to `isActive`
         */}

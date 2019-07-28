@@ -40,7 +40,7 @@ export default function(props) {
     >
       <img
         className="carousel-image"
-        src={project.imageUrl}
+        src={project.imgUrl}
         alt="project preview"
       />
       <div

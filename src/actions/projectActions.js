@@ -1,3 +1,5 @@
+import { db } from "../firebase_config";
+
 // GET_PROJECTS_LIST, GET_PROJECTS_LIST_SUCCESS, GET_PROJECTS_LIST_FAILURE
 export const GET_PROJECTS_LIST = "GET_PROJECTS_LIST";
 export const GET_PROJECTS_LIST_SUCCESS = "GET_PROJECTS_LIST_SUCCESS";
@@ -21,7 +23,24 @@ export const getPreviewProjects = () => dispatch => {
 
   // TODO: build out actual ajax request
 
-  const dummyData = [
+  var data = db.collection("projects").limit(4);
+
+  data
+    .get()
+    .then(snapshot => {
+      dispatch({
+        type: GET_PREVIEW_PROJECTS_SUCCESS,
+        payload: snapshot.docs.map(doc => doc.data())
+      });
+    })
+    .catch(error => {
+      dispatch({
+        type: GET_PREVIEW_PROJECTS_FAILURE,
+        payload: error
+      });
+    });
+
+  /*   const dummyData = [
     {
       name: "Level Up",
       short:
@@ -55,5 +74,5 @@ export const getPreviewProjects = () => dispatch => {
   dispatch({
     type: GET_PREVIEW_PROJECTS_SUCCESS,
     payload: dummyData
-  });
+  }); */
 };
