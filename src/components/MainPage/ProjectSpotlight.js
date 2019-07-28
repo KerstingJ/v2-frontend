@@ -34,46 +34,49 @@ function ProjectsPreview(props) {
   };
 
   return (
-    <ProjectCarousel>
-      <div className="image-Container">
-        {/* 
+    <>
+      <h2>Recent Projects</h2>
+      <ProjectCarousel>
+        <div className="image-Container">
+          {/* 
             map on a list received from props
             when index of map === currentImage, 
             then set that ImageGroup to `isActive`
         */}
-        {props.projects &&
-          props.projects.map((project, index) => {
-            if (index === currentImage) {
-              return <ImageGroup isActive key={index} project={project} />;
-            }
-            return <ImageGroup key={index} project={project} />;
-          })}
-      </div>
-      <div className="button-container">
-        {/* This will hold the buttons and current slide ico */}
-        <button className="carousel-btn" onClick={doLeft}>
-          L
-        </button>
-        {/*
+          {props.projects &&
+            props.projects.map((project, index) => {
+              if (index === currentImage) {
+                return <ImageGroup isActive key={index} project={project} />;
+              }
+              return <ImageGroup key={index} project={project} />;
+            })}
+        </div>
+        <div className="button-container">
+          {/* This will hold the buttons and current slide ico */}
+          <button className="carousel-btn" onClick={doLeft}>
+            L
+          </button>
+          {/*
             Will make a `dot` for each image in carousel,
             if index === currentImage,
             set that dot to `active`
         */}
-        {props.projects &&
-          props.projects.map((project, index) => {
-            return (
-              <div
-                className={`dot${index === currentImage ? " active" : ""}`}
-                key={index}
-                onClick={() => doSelect(index)}
-              />
-            );
-          })}
-        <button className="carousel-btn" onClick={doRight}>
-          R
-        </button>
-      </div>
-    </ProjectCarousel>
+          {props.projects &&
+            props.projects.map((project, index) => {
+              return (
+                <div
+                  className={`dot${index === currentImage ? " active" : ""}`}
+                  key={index}
+                  onClick={() => doSelect(index)}
+                />
+              );
+            })}
+          <button className="carousel-btn" onClick={doRight}>
+            R
+          </button>
+        </div>
+      </ProjectCarousel>
+    </>
   );
 }
 

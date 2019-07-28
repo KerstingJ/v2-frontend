@@ -70,7 +70,7 @@ const ImageGroup = styled.div`
 
   .carousel-image {
     object-fit: cover;
-    object-position: left;
+    object-position: top left;
     height: 100%;
   }
 
