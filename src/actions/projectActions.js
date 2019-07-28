@@ -33,21 +33,21 @@ export const getPreviewProjects = () => dispatch => {
       name: "Not Level Up",
       short:
         "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/lvl.jpg",
+      imageUrl: "./images/partyplanner.jpg",
       link: ""
     },
     {
       name: "Project B",
       short:
         "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/lvl.jpg",
+      imageUrl: "./images/simple.jpg",
       link: ""
     },
     {
       name: "Level Down",
       short:
         "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/lvl.jpg",
+      imageUrl: "./images/tiemeNdo.jpg",
       link: ""
     }
   ];

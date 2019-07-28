@@ -10,9 +10,28 @@ import { getPreviewProjects } from "../../actions";
 function ProjectsPreview(props) {
   const [currentImage, setCurrentImage] = useState(0);
 
+  // This is recommended by the compiler?
+  // i guess it's effectively the same as an empty array
+  // because the function will never change?
+  const { getPreviewProjects } = props;
   useEffect(() => {
-    props.getPreviewProjects();
-  }, []);
+    getPreviewProjects();
+  }, [getPreviewProjects]);
+
+  const doLeft = event => {
+    let nextImage =
+      (currentImage + props.projects.length - 1) % props.projects.length;
+    setCurrentImage(nextImage);
+  };
+
+  const doRight = event => {
+    let nextImage = (currentImage + 1) % props.projects.length;
+    setCurrentImage(nextImage);
+  };
+
+  const doSelect = index => {
+    setCurrentImage(index);
+  };
 
   return (
     <ProjectCarousel>
@@ -24,15 +43,17 @@ function ProjectsPreview(props) {
         */}
         {props.projects &&
           props.projects.map((project, index) => {
-            if (index == currentImage) {
-              return <ImageGroup isActive project={project} />;
+            if (index === currentImage) {
+              return <ImageGroup isActive key={index} project={project} />;
             }
-            return <ImageGroup project={project} />;
+            return <ImageGroup key={index} project={project} />;
           })}
       </div>
       <div className="button-container">
         {/* This will hold the buttons and current slide ico */}
-        <button className="carousel-btn">L</button>
+        <button className="carousel-btn" onClick={doLeft}>
+          L
+        </button>
         {/*
             Will make a `dot` for each image in carousel,
             if index === currentImage,
@@ -41,10 +62,16 @@ function ProjectsPreview(props) {
         {props.projects &&
           props.projects.map((project, index) => {
             return (
-              <div className={`dot${index == currentImage ? " active" : ""}`} />
+              <div
+                className={`dot${index === currentImage ? " active" : ""}`}
+                key={index}
+                onClick={() => doSelect(index)}
+              />
             );
           })}
-        <button className="carousel-btn">R</button>
+        <button className="carousel-btn" onClick={doRight}>
+          R
+        </button>
       </div>
     </ProjectCarousel>
   );
@@ -84,6 +111,7 @@ const ProjectCarousel = styled.div`
 
       &:hover {
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
       }
     }
 
@@ -95,6 +123,10 @@ const ProjectCarousel = styled.div`
       height: 10px;
       border-radius: 50%;
       margin: 0 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       &.active {
         background: lightgrey;

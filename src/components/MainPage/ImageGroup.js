@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function(props) {
   const { project } = props;
@@ -63,15 +63,15 @@ export default function(props) {
 }
 
 const ImageGroup = styled.div`
-  max-width: 500px;
+  height: 400px;
+  max-width: 600px;
   overflow: none;
   border-radius: 2px;
 
   .carousel-image {
-    border-radius: 2px;
-    max-width: 500px;
-    max-height: 350px;
     object-fit: cover;
+    object-position: left;
+    height: 100%;
   }
 
   .image-info {
@@ -123,7 +123,8 @@ const ImageGroup = styled.div`
       transition: background 0.35s ease-in;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
       }
     }
   }
