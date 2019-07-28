@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export default function(props) {
+  const { project } = props;
+
   const [notVisible, setVisible] = useState(true);
   const [doHover, setDoHover] = useState(true);
   const [detailCoords, setDetailCoords] = useState({
@@ -34,10 +36,11 @@ export default function(props) {
       className="image-group"
       onMouseOver={handleHoverIn}
       onMouseLeave={handleHoverOut}
+      style={{ display: `${props.isActive ? "inherit" : "none"}` }}
     >
       <img
         className="carousel-image"
-        src="./images/lvl.jpg"
+        src={project.imageUrl}
         alt="project preview"
       />
       <div
@@ -49,12 +52,8 @@ export default function(props) {
           height: `${detailCoords.height}px`
         }}
       >
-        <h3>Level Up</h3>
-        <p>
-          A Multi-page marketing website for an app based on Stanfords design
-          your life. Built with HTML, CSS, LESS, Javascript. Featuring custom
-          made reusable components and an amazing visual Aesthetic.
-        </p>
+        <h3>{project.name}</h3>
+        <p>{project.short}</p>
         <div className="show-more">
           <button>See More</button>
         </div>

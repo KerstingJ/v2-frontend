@@ -1,28 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import ImageGroup from "./ImageGroup";
 
-export default function(props) {
+import { getPreviewProjects } from "../../actions";
+
+function ProjectsPreview(props) {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    props.getPreviewProjects();
+  }, []);
+
   return (
     <ProjectCarousel>
       <div className="image-Container">
-        {/* This is where the magic happens */}
-        <ImageGroup />
+        {/* 
+            do a map on a list received from props
+            when index of map === currentImage, 
+            then set that ImageGroup to `isActive`
+        */}
+        {props.projects &&
+          props.projects.map((project, index) => {
+            if (index == currentImage) {
+              return <ImageGroup isActive project={project} />;
+            }
+            return <ImageGroup project={project} />;
+          })}
       </div>
       <div className="button-container">
         {/* This will hold the buttons and current slide ico */}
         <button className="carousel-btn">L</button>
-        <div className="dot active" />
-        <div className="dot" />
-        <div className="dot" />
-        <div className="dot" />
+        {/*
+            Will make a `dot` for each image in carousel,
+            if index === currentImage,
+            set that dot to `active`
+        */}
+        {props.projects &&
+          props.projects.map((project, index) => {
+            return (
+              <div className={`dot${index == currentImage ? " active" : ""}`} />
+            );
+          })}
         <button className="carousel-btn">R</button>
       </div>
     </ProjectCarousel>
   );
 }
+
+export default connect(
+  state => ({
+    projects: state.projects.data
+  }),
+  { getPreviewProjects }
+)(ProjectsPreview);
 
 const ProjectCarousel = styled.div`
   display: flex;
