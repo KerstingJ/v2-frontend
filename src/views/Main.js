@@ -51,10 +51,5 @@ const Main = styled.main`
         width: 99%;
       }
     }
-
-    .blog-spotlight {
-      border-left: 1px solid lightgray;
-      padding-left: 1%;
-    }
   }
 `;

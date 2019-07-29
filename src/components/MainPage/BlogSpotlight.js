@@ -55,6 +55,7 @@ const BlogSpotlight = styled.div`
 
   .post-preview {
     margin-bottom: 25px;
+
     .post-banner {
       display: flex;
       justify-content: space-between;

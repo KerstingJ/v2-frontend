@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 
 export default function(props) {
   const { project } = props;
 
-  const [notVisible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const [doHover, setDoHover] = useState(true);
   const [detailCoords, setDetailCoords] = useState({
     top: "0",
@@ -13,6 +13,20 @@ export default function(props) {
     height: "0",
     width: "0"
   });
+
+  useEffect(() => {
+    if (visible) {
+      const makeInvisible = () => {
+        setVisible(false);
+      };
+
+      window.addEventListener("scroll", makeInvisible);
+
+      return () => {
+        window.removeEventListener("scroll", makeInvisible);
+      };
+    }
+  }, [visible]);
 
   const handleHoverIn = event => {
     if (!doHover) {
@@ -22,13 +36,17 @@ export default function(props) {
     let { top, left, height, width } = element.getBoundingClientRect();
 
     setDetailCoords({ top, left, height, width });
-    setVisible(false);
+    setVisible(true);
     setDoHover(false);
   };
 
   const handleHoverOut = event => {
-    setVisible(true);
+    setVisible(false);
     setDoHover(true);
+  };
+
+  const handleScroll = event => {
+    // TODO: this name really needs to be refactored
   };
 
   return (
@@ -36,6 +54,7 @@ export default function(props) {
       className="image-group"
       onMouseOver={handleHoverIn}
       onMouseLeave={handleHoverOut}
+      onScroll={handleScroll}
       style={{ display: `${props.isActive ? "inherit" : "none"}` }}
     >
       <img
@@ -44,7 +63,7 @@ export default function(props) {
         alt="project preview"
       />
       <div
-        className={`image-info${notVisible ? "" : " visible"}`}
+        className={`image-info${visible ? " visible" : ""}`}
         style={{
           top: `${detailCoords.top}px`,
           left: `${detailCoords.left}px`,
@@ -95,7 +114,7 @@ const ImageGroup = styled.div`
 
     &.visible {
       opacity: 1;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(50, 20, 0, 0.8);
       color: rgba(255, 255, 255, 1);
     }
 

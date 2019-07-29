@@ -100,6 +100,7 @@ const ProjectCarousel = styled.div`
 
     .carousel-btn {
       border: none;
+      background: lightgray;
       padding: 2px 5px;
       border-radius: 3px;
       transition: all 0.35s ease;
