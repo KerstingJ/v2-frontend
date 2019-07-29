@@ -7,8 +7,10 @@ export default function(props) {
     <Footer>
       <article className="footer-content">
         <section className="about">
-          <h3>Josh Kersting</h3>
-          <p>Software Developer</p>
+          <div className="dev-info">
+            <h3>Josh Kersting</h3>
+            <p>Software Developer</p>
+          </div>
           <nav>
             <div className="nav-block">
               <a href="https://github.com/KerstingJ">Github</a>
@@ -46,6 +48,10 @@ const Footer = styled.footer`
     max-width: 1000px;
     margin: 0 auto;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     p {
       font-size: 2rem;
     }
@@ -54,9 +60,20 @@ const Footer = styled.footer`
   .about {
     width: 35%;
 
+    @media (max-width: 600px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     nav {
       display: flex;
       margin-top: 15px;
+
+      @media (max-width: 600px) {
+        margin: 0;
+      }
 
       .nav-block {
         &:last-child {
@@ -64,6 +81,7 @@ const Footer = styled.footer`
         }
         a {
           display: block;
+          font-size: 2rem;
           color: orange;
           transition: all 0.35s ease;
 
@@ -78,5 +96,12 @@ const Footer = styled.footer`
     width: 60%;
     max-width: 500px;
     line-height: 1.35;
+
+    @media (max-width: 600px) {
+      margin-top: 20px;
+
+      max-width: 600px;
+      width: 100%;
+    }
   }
 `;

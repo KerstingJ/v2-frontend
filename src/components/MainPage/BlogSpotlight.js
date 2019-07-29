@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import Post from "./PostPreview";
 
 export default function(props) {
   return (
     <BlogSpotlight>
       <h2>Recent Posts</h2>
       <section className="post-container">
-        <article className="post-preview">
+        {props.posts ? (
+          props.posts.map(post => <Post post={post} />)
+        ) : (
+          <h4>Sorry No Posts Yet</h4>
+        )}
+
+        {/* Saving this for reference later */}
+        {/* <article className="post-preview">
           <div className="post-banner">
             <h3>This is the Posts Title</h3>
             <span>2019-7-28</span>
@@ -39,7 +46,7 @@ export default function(props) {
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae ab illo inventore veritatis et quasi architecto beatae vitae...
           </p>
-        </article>
+        </article> */}
       </section>
     </BlogSpotlight>
   );
@@ -53,22 +60,15 @@ const BlogSpotlight = styled.div`
     margin-bottom: 15px;
   }
 
-  .post-preview {
-    margin-bottom: 25px;
+  h4 {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .post-banner {
-      display: flex;
-      justify-content: space-between;
-    }
+    font-size: 4rem;
 
-    h3 {
-      color: orange;
-    }
-
-    p {
-      max-height: 8rem;
-      text-indent: 5rem;
-      font-size: 2rem;
-    }
+    color: orange;
   }
 `;
