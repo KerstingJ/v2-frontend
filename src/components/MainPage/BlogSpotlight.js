@@ -14,9 +14,9 @@ export default function(props) {
         )}
 
         {/* Saving this for reference later */}
-        {/* <article className="post-preview">
+        <article className="post-preview">
           <div className="post-banner">
-            <h3>This is the Posts Title</h3>
+            <h3>If I had some posts this is what they'd look like.</h3>
             <span>2019-7-28</span>
           </div>
           <p>
@@ -25,6 +25,7 @@ export default function(props) {
             quae ab illo inventore veritatis et quasi architecto beatae vitae...
           </p>
         </article>
+        {/*
         <article className="post-preview">
           <div className="post-banner">
             <h3>Another Post</h3>
@@ -70,5 +71,15 @@ const BlogSpotlight = styled.div`
     font-size: 4rem;
 
     color: orange;
+  }
+
+  h3 {
+    color: orange;
+  }
+
+  p {
+    max-height: 8rem;
+    text-indent: 5rem;
+    font-size: 2rem;
   }
 `;

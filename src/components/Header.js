@@ -6,11 +6,16 @@ export default function(props) {
   return (
     <Header>
       <article>
-        <h1>Josh Kersting</h1>
+        <a className="h1" href="/">
+          <h1>Josh Kersting</h1>
+        </a>
         <nav>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/projects">Projects*</NavLink>
+          <NavLink to="/blog">Blog*</NavLink>
           <NavLink to="/resume">Resume</NavLink>
         </nav>
       </article>
@@ -29,6 +34,18 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    a.h1 {
+      color: inherit;
+      font-size: inherit;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   a {
