@@ -40,14 +40,14 @@ export default function(props) {
             <p>
               I am a Software Developer, and Father. Born in Muskegon, Mi, I
               spent most of my professional life traveling the Mid-South and
-              Mid-west helping grass-roots organizations manage and use their
-              data. After moving back home to be closer to family I started
-              working in manufacturing, where I was able to apply my skills and
-              work with a cross functional team to improve the processes and
-              systems used in my work area. My passion for problem solving and
-              Tech lead me to join Lambda School, in Febuary of 2019, where I
-              now work as a Team Lead, and will shortly finish a course on
-              Computer Science with Web Development focus.
+              Mid-west helping grass-roots organizations manage and use data to
+              drive organizational goals. After moving back home to be closer to
+              family I started working in manufacturing, where I was able to
+              apply my skills and work with a cross functional team to improve
+              the processes and systems used in my work area. My passion for
+              problem solving and Tech lead me to join Lambda School in Febuary
+              of 2019, where I now work as a Team Lead, and will shortly finish
+              a course on Computer Science with Web Development focus.
             </p>
           </section>
         </article>
