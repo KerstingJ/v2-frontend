@@ -78,8 +78,8 @@ const BlogSpotlight = styled.div`
   }
 
   p {
-    max-height: 8rem;
     text-indent: 5rem;
     font-size: 2rem;
+    text-overflow: ellipsis;
   }
 `;

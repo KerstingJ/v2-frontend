@@ -108,6 +108,8 @@ const ImageGroup = styled.div`
     background: rgba(0, 0, 0, 0);
     color: rgba(255, 255, 255, 0);
 
+    z-index: -1;
+
     transition: background 0.35s ease-in;
     transition: color 0.35s ease-in;
     transition: opacity 0.35s ease-in;
@@ -116,6 +118,8 @@ const ImageGroup = styled.div`
       opacity: 1;
       background: rgba(50, 20, 0, 0.8);
       color: rgba(255, 255, 255, 1);
+
+      z-index: unset;
     }
 
     h3 {
