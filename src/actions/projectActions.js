@@ -23,7 +23,10 @@ export const getPreviewProjects = () => dispatch => {
 
   // TODO: build out actual ajax request
 
-  var data = db.collection("projects").limit(4);
+  var data = db
+    .collection("projects")
+    .limit(4)
+    .orderBy("date", "desc");
 
   data
     .get()
