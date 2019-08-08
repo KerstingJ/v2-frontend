@@ -1,0 +1,14 @@
+
+## Project Data Details
+imgUrl: String representing the image location
+name: String name of project
+short: clob short description of projects
+tech: [Array of Strings]
+
+about: clob breakdown of project what and why
+stack: clob details of tech used and why
+challenge: details of challenges faced and how we overcame them
+next_steps: what would we add on to the project next and why
+date: date of project
+
+## Post Data Details
