@@ -92,6 +92,7 @@ const ImageGroup = styled.div`
   max-width: 600px;
   overflow: none;
   border-radius: 2px;
+  touch-action: auto;
 
   .carousel-image {
     height: 100%;
@@ -119,6 +120,8 @@ const ImageGroup = styled.div`
     transition: background 0.35s ease-in;
     transition: color 0.35s ease-in;
     transition: opacity 0.35s ease-in;
+
+    touch-action: auto;
 
     &:hover {
       opacity: 1;
