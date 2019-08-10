@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function(props) {
   const { project } = props;
 
-  // const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
   // const [doHover, setDoHover] = useState(true);
   // const [detailCoords, setDetailCoords] = useState({
   //   top: "0",
@@ -69,13 +69,14 @@ export default function(props) {
       /> */}
       <div
         // className={`image-info${visible ? " visible" : ""}`}
-        className={`image-info`}
+        className={`image-info${visible ? " visible" : ""}`}
         // style={{
         //   top: `${detailCoords.top}px`,
         //   left: `${detailCoords.left}px`,
         //   width: `${detailCoords.width}px`,
         //   height: `${detailCoords.height}px`
         // }}
+        onClick={() => setVisible(!visible)}
       >
         <h3>{project.name}</h3>
         <p>{project.short}</p>
@@ -115,7 +116,7 @@ const ImageGroup = styled.div`
     background: rgba(0, 0, 0, 0);
     color: rgba(255, 255, 255, 0);
 
-    /* z-index: -1; */
+    /* z-index: -2; */
 
     transition: background 0.35s ease-in;
     transition: color 0.35s ease-in;
@@ -123,7 +124,9 @@ const ImageGroup = styled.div`
 
     touch-action: auto;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &.visible {
       opacity: 1;
       background: rgba(50, 20, 0, 0.8);
       color: rgba(255, 255, 255, 1);
