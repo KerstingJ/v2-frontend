@@ -245,11 +245,7 @@ export default function(props) {
             </section>
           </section>
         </article>
-        <a
-          className="download"
-          href="./images/JoshKerstingResume20190807.pdf"
-          download="JoshKerstingResume"
-        >
+        <a className="download" href=".\images\Joshua_Kersting_Resume.pdf">
           Download
         </a>
       </section>
