@@ -7,6 +7,7 @@ import { getProject } from "../../actions";
 function Project(props) {
   let proj_id = props.match.params.key;
   let { project } = props;
+  console.log(project);
 
   useEffect(() => {
     props.getProject(proj_id);
@@ -22,30 +23,45 @@ function Project(props) {
 
   return (
     <Main>
-      <h3>{project.name}</h3>
-      <section className="data-tags">
-        {project.tech &&
-          project.tech.map(tag => {
-            return <span className="tag">{tag}</span>;
-          })}
-      </section>
+      <article className="main-details">
+        <h3>{project.name}</h3>
+        <section className="data-tags">
+          {project.tech &&
+            project.tech.map(tag => {
+              return (
+                <span key={tag} className="tag">
+                  {tag.toUpperCase()}
+                </span>
+              );
+            })}
+        </section>
+        <img
+          className="project-img"
+          src={project.imgUrl.slice(1, project.imgUrl.length)}
+        />
+        <div className="links">
+          <a href={project.live_link}>Live Site</a>
+          <a href={project.repo_link}>Github Repo</a>
+        </div>
+      </article>
       <section className="about">
         <h4>About</h4>
-        <p>{project.about}</p>
+        <p>{project.about && project.about}</p>
       </section>
       <section className="stack">
         <h4>Stack</h4>
-        <p>{project.stack}</p>
+        <p>{project.stack && project.stack}</p>
       </section>
       <section className="challenge">
         <h4>Challenge</h4>
-        {project.challenge.split("{new_para}").map(para => (
-          <p>{para}</p>
-        ))}
+        {project.challenge &&
+          project.challenge
+            .split("{new_para}")
+            .map((para, i) => <p key={i}>{para}</p>)}
       </section>
       <section className="next_steps">
         <h4>Next Steps</h4>
-        <p>{project.next_steps}</p>
+        <p>{project.next_steps && project.next_steps}</p>
       </section>
     </Main>
   );
@@ -59,6 +75,14 @@ export default connect(
 )(Project);
 
 const Main = styled.main`
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  h3 {
+    margin-bottom: 15px;
+  }
+
   .tag {
     background: rgb(230, 230, 230);
     padding: 0 7px;
@@ -66,5 +90,52 @@ const Main = styled.main`
     border-radius: 3px;
     border-bottom: 2px solid gray;
     border-right: 2px solid gray;
+
+    font-weight: 700;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: white;
+      font-size: 2.4rem;
+      padding: 3px 15px;
+      border-radius: 3px;
+      background: orange;
+      margin-left: 15px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  section {
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+    color: orange;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    max-width: 650px;
+
+    text-indent: 3rem;
   }
 `;
