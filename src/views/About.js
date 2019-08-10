@@ -147,8 +147,8 @@ const Main = styled.main`
     .profile-pic {
       display: block;
       max-width: 500px;
+      max-height: 500px;
       width: 48%;
-      height: auto;
       border-radius: 3px;
       object-fit: cover;
       object-position: bottom right;

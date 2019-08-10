@@ -24,7 +24,7 @@ function Project(props) {
     <Main>
       <article className="main-details">
         <h3>{project.name}</h3>
-        <section className="data-tags">
+        <section className="tech-tags">
           {project.tech &&
             project.tech.map(tag => {
               return (
@@ -87,7 +87,7 @@ const Main = styled.main`
     margin-bottom: 10px;
   }
 
-  .data-tags {
+  .tech-tags {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -121,9 +121,14 @@ const Main = styled.main`
       border-radius: 3px;
       background: orange;
       margin-left: 15px;
+      border: 1px solid orange;
+
+      transition: all 0.25s ease;
 
       &:hover {
         text-decoration: none;
+        color: orange;
+        background: white;
       }
 
       &:first-child {

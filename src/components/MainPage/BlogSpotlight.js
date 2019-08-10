@@ -1,6 +1,6 @@
 import React /* , { useState } */ from "react";
 import styled from "styled-components";
-import Post from "./PostPreview";
+// import Post from "./PostPreview";
 
 export default function(props) {
   return (
@@ -11,15 +11,14 @@ export default function(props) {
         <article className="post-preview">
           <div className="post-banner">
             <h3>Blog Coming Soon!</h3>
-            <span>2019-08-01</span>
+            <span>2019-09-01</span>
           </div>
           <p>
             I'm currently working on some blog posts to add to this website.
             There will be a new item in the Nav to look through recent posts.
             You'll also see a few recent posts displayed here! Join me as I
-            learn new tech and navigating my way through the tech ecosystem as a
-            guy with an untraditional background and passion for solving
-            problems.
+            learn new tech and navigate my way through the ecosystem as a guy
+            with an untraditional background and passion for solving problems.
           </p>
         </article>
         {/*

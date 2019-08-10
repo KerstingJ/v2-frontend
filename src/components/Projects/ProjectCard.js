@@ -20,7 +20,6 @@ export default function(props) {
 const Main = styled.main`
   max-width: 300px;
   margin: 15px;
-  padding: 10px;
   border: 1px solid orange;
   border-radius: 5px;
 
@@ -30,17 +29,21 @@ const Main = styled.main`
 
   h4 {
     color: orange;
+    /* background: orange; */
     margin-bottom: 10px;
     font-size: 2.4rem;
+    padding: 10px;
   }
 
   p {
+    padding: 0 10px;
     margin-bottom: 10px;
     font-size: 2rem;
   }
 
   .button {
     text-align: right;
+    padding: 10px 5px;
 
     a {
       padding: 3px 7px;
