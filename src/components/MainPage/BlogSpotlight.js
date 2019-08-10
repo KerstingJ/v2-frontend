@@ -20,9 +20,9 @@ export default function(props) {
             <span>2019-7-28</span>
           </div>
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae...
+            This would be a preview of the post I wrote. Probably introducing
+            the challenge or tech I tech I tried using. Not to long though, it
+            will get cut off a n chars...
           </p>
         </article>
         {/*
