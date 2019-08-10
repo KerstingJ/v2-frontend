@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function(props) {
   const { project } = props;
@@ -74,7 +74,7 @@ export default function(props) {
         <h3>{project.name}</h3>
         <p>{project.short}</p>
         <div className="show-more">
-          <button>See More</button>
+          <Link to={`/projects/${project.id}`}>See More</Link>
         </div>
       </div>
     </ImageGroup>
@@ -136,11 +136,15 @@ const ImageGroup = styled.div`
       text-align: right;
     }
 
-    button {
+    a {
       background: none;
       border: 1px solid white;
-      color: white;
+      border-radius: 4px;
 
+      color: white;
+      font-size: 2rem;
+
+      padding: 6px 12px;
       width: 250px;
 
       transition: background 0.35s ease-in;
@@ -148,6 +152,7 @@ const ImageGroup = styled.div`
       &:hover {
         background: rgba(255, 255, 255, 0.3);
         cursor: pointer;
+        text-decoration: none;
       }
     }
   }

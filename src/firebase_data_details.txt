@@ -11,4 +11,7 @@ challenge: details of challenges faced and how we overcame them
 next_steps: what would we add on to the project next and why
 date: date of project
 
+live_link: url
+repo_link: url
+
 ## Post Data Details

@@ -33,7 +33,7 @@ export const getPreviewProjects = () => dispatch => {
     .then(snapshot => {
       dispatch({
         type: GET_PREVIEW_PROJECTS_SUCCESS,
-        payload: snapshot.docs.map(doc => doc.data())
+        payload: snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
       });
     })
     .catch(error => {
