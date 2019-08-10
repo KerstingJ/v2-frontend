@@ -7,22 +7,19 @@ export default function(props) {
     <BlogSpotlight>
       <h2>Recent Posts</h2>
       <section className="post-container">
-        {props.posts ? (
-          props.posts.map(post => <Post post={post} />)
-        ) : (
-          <h4>Sorry No Posts Yet</h4>
-        )}
-
         {/* Saving this for reference later */}
         <article className="post-preview">
           <div className="post-banner">
-            <h3>If I had some posts this is what they'd look like.</h3>
-            <span>2019-7-28</span>
+            <h3>Blog Coming Soon!</h3>
+            <span>2019-08-01</span>
           </div>
           <p>
-            This would be a preview of the post I wrote. Probably introducing
-            the challenge or tech I tech I tried using. Not to long though, it
-            will get cut off a n chars...
+            I'm currently working on some blog posts to add to this website.
+            There will be a new item in the Nav to look through recent posts.
+            You'll also see a few recent posts displayed here! Join me as I
+            learn new tech and navigating my way through the tech ecosystem as a
+            guy with an untraditional background and passion for solving
+            problems.
           </p>
         </article>
         {/*

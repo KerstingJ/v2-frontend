@@ -44,7 +44,7 @@ function ProjectsPreview(props) {
             then set that ImageGroup to `isActive`
         */}
           {props.projects &&
-            props.projects.map((project, index) => {
+            props.projects.slice(0, 4).map((project, index) => {
               if (index === currentImage) {
                 return <ImageGroup isActive key={index} project={project} />;
               }
@@ -62,7 +62,7 @@ function ProjectsPreview(props) {
             set that dot to `active`
         */}
           {props.projects &&
-            props.projects.map((project, index) => {
+            props.projects.slice(0, 4).map((project, index) => {
               return (
                 <div
                   className={`dot${index === currentImage ? " active" : ""}`}

@@ -6,12 +6,11 @@ import { getProject } from "../../actions";
 
 function Project(props) {
   let proj_id = props.match.params.key;
-  let { project } = props;
-  console.log(project);
+  let { project, getProject } = props;
 
   useEffect(() => {
-    props.getProject(proj_id);
-  }, [proj_id]);
+    getProject(proj_id);
+  }, [proj_id, getProject]);
 
   if (!project) {
     return (
@@ -38,6 +37,7 @@ function Project(props) {
         <img
           className="project-img"
           src={project.imgUrl.slice(1, project.imgUrl.length)}
+          alt="Screen shot of project"
         />
         <div className="links">
           <a href={project.live_link}>Live Site</a>

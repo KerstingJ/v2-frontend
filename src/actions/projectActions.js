@@ -57,7 +57,6 @@ export const getProject = proj_id => dispatch => {
   data
     .get()
     .then(snapshot => {
-      console.log(snapshot);
       if (!snapshot.exists) {
         throw new Error("Document Does Not Exist");
       }
@@ -69,6 +68,34 @@ export const getProject = proj_id => dispatch => {
     .catch(error => {
       dispatch({
         type: GET_PROJECT_FAILURE,
+        payload: error
+      });
+    });
+};
+
+// GET_ALL_PROJECTS, GET_ALL_PROJECTS_SUCCESS, GET_ALL_PROJECTS_FAILURE
+export const GET_ALL_PROJECTS = "GET_ALL_PROJECTS";
+export const GET_ALL_PROJECTS_SUCCESS = "GET_ALL_PROJECTS_SUCCESS";
+export const GET_ALL_PROJECTS_FAILURE = "GET_ALL_PROJECTS_FAILURE";
+
+export const getAllProjects = () => dispatch => {
+  dispatch({
+    type: GET_ALL_PROJECTS
+  });
+
+  var data = db.collection("projects").orderBy("date", "desc");
+
+  data
+    .get()
+    .then(snapshot => {
+      dispatch({
+        type: GET_ALL_PROJECTS_SUCCESS,
+        payload: snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+      });
+    })
+    .catch(error => {
+      dispatch({
+        type: GET_ALL_PROJECTS_FAILURE,
         payload: error
       });
     });

@@ -5,7 +5,10 @@ import {
   GET_PREVIEW_PROJECTS_SUCCESS,
   GET_PROJECT,
   GET_PROJECT_SUCCESS,
-  GET_PROJECT_FAILURE
+  GET_PROJECT_FAILURE,
+  GET_ALL_PROJECTS,
+  GET_ALL_PROJECTS_SUCCESS,
+  GET_ALL_PROJECTS_FAILURE
 } from "../actions";
 
 const initialState = {
@@ -13,6 +16,7 @@ const initialState = {
   current: null,
   gettingPreview: false,
   gettingProject: false,
+  gettingAllProjects: false,
   error: null
 };
 
@@ -34,6 +38,24 @@ export default (state = initialState, action) => {
       return {
         ...state,
         gettingPreview: false,
+        data: action.payload
+      };
+    case GET_ALL_PROJECTS:
+      return {
+        ...state,
+        gettingAllProjects: true,
+        error: null
+      };
+    case GET_ALL_PROJECTS_FAILURE:
+      return {
+        ...state,
+        gettingAllProjects: false,
+        error: action.payload
+      };
+    case GET_ALL_PROJECTS_SUCCESS:
+      return {
+        ...state,
+        gettingAllProjects: false,
         data: action.payload
       };
     case GET_PROJECT:
