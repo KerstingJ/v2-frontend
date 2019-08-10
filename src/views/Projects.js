@@ -13,7 +13,7 @@ export default function(props) {
     <Main>
       <Header />
       <section className="content">
-        <Route path="/projects" component={Search} />
+        {/* <Route path="/projects" component={Search} /> */}
         <Route exact path="/projects" component={SearchResults} />
         <Route path="/projects/:key" component={Project} />
       </section>

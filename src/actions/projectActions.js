@@ -21,8 +21,6 @@ export const getPreviewProjects = () => dispatch => {
     type: GET_PREVIEW_PROJECTS
   });
 
-  // TODO: build out actual ajax request
-
   var data = db
     .collection("projects")
     .limit(4)
@@ -42,40 +40,36 @@ export const getPreviewProjects = () => dispatch => {
         payload: error
       });
     });
+};
 
-  /*   const dummyData = [
-    {
-      name: "Level Up",
-      short:
-        "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/lvl.jpg",
-      link: ""
-    },
-    {
-      name: "Not Level Up",
-      short:
-        "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/partyplanner.jpg",
-      link: ""
-    },
-    {
-      name: "Project B",
-      short:
-        "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/simple.jpg",
-      link: ""
-    },
-    {
-      name: "Level Down",
-      short:
-        "A Multi-page marketing website for an app based on Stanfords design your life. Built with HTML, CSS, LESS, Javascript. Featuring custom made reusable components and an amazing visual Aesthetic.",
-      imageUrl: "./images/tiemeNdo.jpg",
-      link: ""
-    }
-  ];
+// GET_PROJECT, GET_PROJECT_SUCCESS, GET_PROJECT_FAILURE
+export const GET_PROJECT = "GET_PROJECT";
+export const GET_PROJECT_SUCCESS = "GET_PROJECT_SUCCESS";
+export const GET_PROJECT_FAILURE = "GET_PROJECT_FAILURE";
 
+export const getProject = proj_id => dispatch => {
   dispatch({
-    type: GET_PREVIEW_PROJECTS_SUCCESS,
-    payload: dummyData
-  }); */
+    type: GET_PROJECT
+  });
+
+  var data = db.collection("projects").doc(proj_id);
+
+  data
+    .get()
+    .then(snapshot => {
+      console.log(snapshot);
+      if (!snapshot.exists) {
+        throw new Error("Document Does Not Exist");
+      }
+      dispatch({
+        type: GET_PROJECT_SUCCESS,
+        payload: snapshot.data()
+      });
+    })
+    .catch(error => {
+      dispatch({
+        type: GET_PROJECT_FAILURE,
+        payload: error
+      });
+    });
 };
