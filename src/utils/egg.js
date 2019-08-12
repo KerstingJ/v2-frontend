@@ -2,7 +2,7 @@ const hexValue = () => Math.floor(Math.random() * 256).toString(16);
 
 function randomColor() {
   const html = document.querySelector("html");
-  const color = `#${hexValue()}${hexValue()}${hexValue()}`;
+  let color = `#${hexValue()}${hexValue()}${hexValue()}`;
   if (color.length < 7) color += "0";
 
   html.style.setProperty("--main-color", color);
