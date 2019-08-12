@@ -54,7 +54,7 @@ export default function(props) {
         <article className="values">
           <section className="value-block">
             <h3>Values</h3>
-            <p>We are, what we believe. These are my most important beliefs.</p>
+            <p>We are what we believe. These are my most important beliefs.</p>
           </section>
           <div className="value-content">
             <p>
