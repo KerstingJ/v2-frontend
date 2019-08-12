@@ -35,7 +35,8 @@ function ProjectsPreview(props) {
 
   return (
     <>
-      <h2>Recent Projects</h2>
+      {/* TODO: Move this to css sheet */}
+      <h2 style={{ marginBottom: "25px" }}>Recent Projects</h2>
       <ProjectCarousel>
         <div className="image-Container">
           {/* 
@@ -94,14 +95,16 @@ const ProjectCarousel = styled.div`
 
   .button-container {
     margin-top: 15px;
+    margin-bottom: 20px;
 
     display: flex;
     align-items: center;
 
     .carousel-btn {
       border: none;
-      background: lightgray;
-      padding: 2px 5px;
+      color: white;
+      background: var(--main-color);
+      padding: 7px 10px;
       border-radius: 3px;
       transition: all 0.35s ease;
 
