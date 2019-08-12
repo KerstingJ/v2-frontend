@@ -23,7 +23,7 @@ const Post = styled.section`
   }
 
   h3 {
-    color: orange;
+    color: var(--main-color);
   }
 
   p {

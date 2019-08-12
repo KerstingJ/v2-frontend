@@ -278,7 +278,7 @@ const Main = styled.main`
       padding: 3px 7px;
       border-radius: 3px;
       color: white;
-      background: orange;
+      background: var(--main-color);
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
       transition: all 0.25s ease;
 

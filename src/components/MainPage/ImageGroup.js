@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState /* useEffect */ } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
+// TODO: This needs to be refactored to remove unused styles
 
 export default function(props) {
   const { project } = props;

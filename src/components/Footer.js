@@ -82,7 +82,7 @@ const Footer = styled.footer`
         a {
           display: block;
           font-size: 2rem;
-          color: orange;
+          color: var(--main-color);
           transition: all 0.35s ease;
 
           &:hover {

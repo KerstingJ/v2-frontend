@@ -101,11 +101,11 @@ const Main = styled.main`
     align-items: flex-start;
 
     h3 {
-      color: orange;
+      color: var(--main-color);
     }
 
     h4 {
-      color: orange;
+      color: var(--main-color);
       font-size: 2rem;
     }
 
@@ -135,7 +135,7 @@ const Main = styled.main`
       padding: 15px;
 
       strong {
-        color: orange;
+        color: var(--main-color);
         font-weight: bold;
       }
 
@@ -180,7 +180,7 @@ const Main = styled.main`
         margin-bottom: 15px;
 
         strong {
-          color: orange;
+          color: var(--main-color);
           font-size: 2rem;
           font-weight: bold;
         }

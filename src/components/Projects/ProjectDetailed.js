@@ -119,15 +119,15 @@ const Main = styled.main`
       font-size: 2.4rem;
       padding: 3px 15px;
       border-radius: 3px;
-      background: orange;
+      background: var(--main-color);
       margin-left: 15px;
-      border: 1px solid orange;
+      border: 1px solid var(--main-color);
 
       transition: all 0.25s ease;
 
       &:hover {
         text-decoration: none;
-        color: orange;
+        color: var(--main-color);
         background: white;
       }
 
@@ -143,7 +143,7 @@ const Main = styled.main`
 
   h4 {
     font-size: 2.4rem;
-    color: orange;
+    color: var(--main-color);
   }
 
   p {

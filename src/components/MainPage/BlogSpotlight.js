@@ -66,11 +66,11 @@ const BlogSpotlight = styled.div`
 
     font-size: 4rem;
 
-    color: orange;
+    color: var(--main-color);
   }
 
   h3 {
-    color: orange;
+    color: var(--main-color);
   }
 
   p {

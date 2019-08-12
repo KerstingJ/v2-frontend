@@ -20,7 +20,7 @@ export default function(props) {
 const Main = styled.main`
   max-width: 300px;
   margin: 15px;
-  border: 1px solid orange;
+  border: 1px solid var(--main-color);
   border-radius: 5px;
 
   display: flex;
@@ -28,8 +28,8 @@ const Main = styled.main`
   justify-content: space-between;
 
   h4 {
-    color: orange;
-    /* background: orange; */
+    color: var(--main-color);
+    /* background: var(--main-color); */
     margin-bottom: 10px;
     font-size: 2.4rem;
     padding: 10px;
@@ -48,8 +48,8 @@ const Main = styled.main`
     a {
       padding: 3px 7px;
       border-radius: 3px;
-      background: orange;
-      border: 1px solid orange;
+      background: var(--main-color);
+      border: 1px solid var(--main-color);
       color: white;
       font-size: 2rem;
 
@@ -58,7 +58,7 @@ const Main = styled.main`
       &:hover {
         text-decoration: none;
         background: white;
-        color: orange;
+        color: var(--main-color);
       }
     }
   }

@@ -51,12 +51,12 @@ const Header = styled.header`
   a {
     font-size: 2rem;
     margin-left: 20px;
-    color: orange;
+    color: var(--main-color);
 
     transition: color 0.35s ease;
 
     &.active {
-      color: orange;
+      color: var(--main-color);
       font-weight: bold;
     }
 
