@@ -2,10 +2,10 @@ const hexValue = () => Math.floor(Math.random() * 256).toString(16);
 
 function randomColor() {
   const html = document.querySelector("html");
-  html.style.setProperty(
-    "--main-color",
-    `#${hexValue()}${hexValue()}${hexValue()}`
-  );
+  const color = `#${hexValue()}${hexValue()}${hexValue()}`;
+  if (color.length < 7) color += "0";
+
+  html.style.setProperty("--main-color", color);
 }
 
 export default function code(winFunction = null) {
