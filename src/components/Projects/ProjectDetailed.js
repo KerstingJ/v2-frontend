@@ -50,7 +50,10 @@ function Project(props) {
       </section>
       <section className="stack">
         {project.stack && <h4>Stack</h4>}
-        <p>{project.stack && project.stack}</p>
+        {project.stack &&
+          project.stack
+            .split("{new_para}")
+            .map((para, i) => <p key={i}>{para}</p>)}
       </section>
       <section className="challenge">
         {project.challenge && <h4>Challenge</h4>}
