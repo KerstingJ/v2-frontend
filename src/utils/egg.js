@@ -8,11 +8,11 @@ function randomColor() {
   html.style.setProperty("--main-color", color);
 }
 
-export default function code(winFunction = null) {
+export default function code(winFunction = null, c = null) {
   winFunction = winFunction || randomColor;
   let active = false;
   let cache = [];
-  const code = [
+  const code = c || [
     "ArrowUp",
     "ArrowUp",
     "ArrowDown",
@@ -32,7 +32,7 @@ export default function code(winFunction = null) {
     }
 
     cache.push(event.key);
-
+    // console.log(event.key, cache);
     if (cache[cache.length - 1] === code[cache.length - 1]) {
       if (event.key === "Enter") {
         active = true;
