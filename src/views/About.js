@@ -19,18 +19,18 @@ export default function(props) {
             <section className="details-content">
               <h2>Josh Kersting</h2>
               <p>
-                <strong>Software Developer</strong>
+                <strong>Software Engineer</strong>
               </p>
               <p>
-                <strong>Location: </strong>Muskegon, Mi
+                <strong>Location: </strong>Traverse City, Mi
               </p>
               <p>
-                <strong>Languages: </strong>Java, Javascript, Python, HTML, CSS,
+                <strong>Languages: </strong>Javascript, Python, Java, HTML, CSS,
                 SQL, noSQL
               </p>
               <p>
-                <strong>Libraries/Frameworks: </strong>Spring, Hibernate,
-                React.JS, Redux.js, Thunks, Firebase, Axios, Postgresql,
+                <strong>Libraries/Frameworks: </strong>
+                React.JS, Redux.js, Spring, Hibernate, Thunks, Firebase, Axios, Postgresql,
                 Styled-components, reactstrap, canvas, and more...
               </p>
             </section>
@@ -41,13 +41,20 @@ export default function(props) {
               I am a Software Developer, and Father. Born in Muskegon, Mi, I
               spent most of my professional life traveling the Mid-South and
               Mid-west helping grass-roots organizations manage and use data to
-              drive organizational goals. After moving back home to be closer to
-              family I started working in manufacturing, where I was able to
-              apply my skills and work with a cross functional team to improve
-              the processes and systems used in my work area. My passion for
-              problem solving and Tech lead me to join Lambda School in Febuary
-              of 2019, where I now work as a Team Lead, and will shortly finish
-              a course on Computer Science with Web Development focus.
+              drive organizational goals.
+            </p>
+            <p>
+              After moving back home to be closer to family I joined Lambda School, 
+              where I not only completed their curriculum in Computer Science and 
+              Web Development in 2019, but was also a Team Lead mentoring
+              and teaching students working their way through the curriculum.
+            </p>
+            <p>
+              In October I joined SampleServe as a Frontend Engineer. There I developed React 
+              and React Native applications and worked with product management to define 
+              project needs and deliver an excellent product.
+              I also championed creating a code base that could scale by focusing on 
+              separation of data and presentation layers and creating reusable atomic elements.
             </p>
           </section>
         </article>
@@ -162,6 +169,9 @@ const Main = styled.main`
 
     .brief {
       padding: 15px;
+      p {
+        margin-bottom: 15px;
+      }
     }
 
     .details-content {
