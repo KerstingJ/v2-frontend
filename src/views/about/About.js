@@ -39,7 +39,7 @@ export default function About() {
           <section className="brief">
             <h3>About</h3>
             <p>
-              I am a Software Developer, and Father. Born in Muskegon, Mi, I
+              I am a Software Engineer, and Father. Born in Muskegon, Mi, I
               spent most of my professional life traveling the Mid-South and
               Mid-west helping grass-roots organizations manage and use data to
               drive organizational goals.
@@ -51,11 +51,11 @@ export default function About() {
               and teaching students working their way through the curriculum.
             </p>
             <p>
-              In October I joined SampleServe as a Frontend Engineer. There I developed React 
+              In October I joined SampleServe as a Frontend Engineer. I developed React 
               and React Native applications and worked with product management to define 
               project needs and deliver an excellent product.
-              I also championed creating a code base that could scale by focusing on 
-              separation of data and presentation layers and creating reusable atomic elements.
+              I championed creating a code base that could scale by focusing on 
+              separation of data and presentation layers creating easy to test, maintainable components.
             </p>
           </section>
         </article>

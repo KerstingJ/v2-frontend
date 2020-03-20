@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 
-export default function(props) {
+export default function _Footer(props) {
   return (
     <Footer>
       <article className="footer-content">
         <section className="about">
           <div className="dev-info">
             <h3>Josh Kersting</h3>
-            <p>Software Developer</p>
+            <p>Software Engineer</p>
           </div>
           <nav>
             <div className="nav-block">
@@ -26,10 +26,11 @@ export default function(props) {
         </section>
         <section className="brief">
           <p>
-            For those who have seen the Earth from space, and for the hundreds
-            and perhaps thousands more who will, the experience most certainly
-            changes your perspective. The things that we share in our world are
-            far more valuable than those which divide us.
+          Josh has spent the last year working extensively with 
+          React, React Native, Redux, and other Frontend technologies,
+          as well as Python, Node, and Java backends. He has Built web and mobile
+          applications as Frontend Engineer at Sampleserve, and mentored students
+          through Lambda Schools full stack web development curriculum as a Team Lead.
           </p>
         </section>
       </article>
