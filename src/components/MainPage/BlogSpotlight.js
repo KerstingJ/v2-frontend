@@ -11,7 +11,7 @@ export default function(props) {
         <article className="post-preview">
           <div className="post-banner">
             <h3>Blog Coming Soon!</h3>
-            <span>2019-09-01</span>
+            <span>2020-04-01</span>
           </div>
           <p>
             I'm currently working on some blog posts to add to this website.
