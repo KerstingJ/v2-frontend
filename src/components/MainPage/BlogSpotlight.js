@@ -21,29 +21,6 @@ export default function(props) {
             with an untraditional background and passion for solving problems.
           </p>
         </article>
-        {/*
-        <article className="post-preview">
-          <div className="post-banner">
-            <h3>Another Post</h3>
-            <span>2019-7-28</span>
-          </div>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae...
-          </p>
-        </article>
-        <article className="post-preview">
-          <div className="post-banner">
-            <h3>Ba Dah Dah</h3>
-            <span>2019-7-28</span>
-          </div>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae...
-          </p>
-        </article> */}
       </section>
     </BlogSpotlight>
   );
