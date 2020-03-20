@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 
-import Header from "../components/Header";
-import ProjectList from "../components/Projects/ProjectList";
-import Project from "../components/Projects/ProjectDetailed";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import ProjectList from "../../components/Projects/ProjectList";
+import Project from "../../components/Projects/ProjectDetailed";
+import Footer from "../../components/Footer";
 
-export default function(props) {
+export default function Projects() {
   return (
     <Main>
       <Header />

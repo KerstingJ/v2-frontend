@@ -3,13 +3,12 @@ import { Route } from "react-router-dom";
 
 // import PrivateRoute from './components/PrivateRouter';
 import code from "./utils/egg";
-import Main from "./views/Main";
-import About from "./views/About";
-import Projects from "./views/Projects";
-import Blog from "./views/Blog";
-import Resume from "./views/Resume";
+import Main from "./views/main/Main";
+import About from "./views/about/About";
+import Projects from "./views/project/Projects";
+import Blog from "./views/blog/Blog";
 
-export default function(props) {
+export default function App() {
   // const [cute, setCute] = useState(false);
 
   useEffect(() => {
@@ -35,8 +34,6 @@ export default function(props) {
       {/* subpaths are located in the projects and Blogs components */}
       <Route path="/projects" component={Projects} />
       <Route path="/blog" component={Blog} />
-
-      <Route path="/resume" component={Resume} />
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-export default function(props) {
+import BlogContainer from "./posts/test"
+
+export default function Blog() {
   return (
     <Main>
       <Header />
@@ -13,6 +15,7 @@ export default function(props) {
         {/* <Route path="/projects" component={Search} />
         <Route exact path="/projects" component={SearchResults} />
         <Route path="/projects/:key" component={Project} /> */}
+        <BlogContainer />
       </section>
       <Footer />
     </Main>

@@ -2,7 +2,7 @@ import React /* , { useState } */ from "react";
 import styled from "styled-components";
 // import Post from "./PostPreview";
 
-export default function(props) {
+export default function _BlogSpotlight(props) {
   return (
     <BlogSpotlight>
       <h2>Recent Posts</h2>

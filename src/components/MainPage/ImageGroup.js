@@ -2,7 +2,7 @@ import React, { useState /* useEffect */ } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export default function(props) {
+export default function _ImageGroup(props) {
   const { project } = props;
 
   const [visible, setVisible] = useState(false);

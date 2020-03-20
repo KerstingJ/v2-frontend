@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../components/Header";
-import ProjectSpotlight from "../components/MainPage/ProjectSpotlight";
-import BlogSpotlight from "../components/MainPage/BlogSpotlight";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import ProjectSpotlight from "../../components/MainPage/ProjectSpotlight";
+import BlogSpotlight from "../../components/MainPage/BlogSpotlight";
+import Footer from "../../components/Footer";
 
-export default function(props) {
+export default function _Main() {
   return (
     <Main>
       <Header />

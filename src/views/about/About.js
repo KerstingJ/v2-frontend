@@ -1,10 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-export default function(props) {
+export default function About() {
   return (
     <Main>
       <Header />
@@ -63,7 +64,7 @@ export default function(props) {
             <h3>Values</h3>
             <p>We are what we believe. These are my most important beliefs.</p>
           </section>
-          <div className="value-content">
+          <section className="value-content">
             <p>
               <strong>Inclusivity </strong>
               The amazing thing about people are their unique and powerful
@@ -86,7 +87,7 @@ export default function(props) {
               is lifted that cascades through each of us and we're all better
               for it.
             </p>
-          </div>
+          </section>
         </article>
       </section>
       <Footer />
