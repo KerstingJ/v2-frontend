@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 import Header from "../../components/Header";
-import ProjectSpotlight from "../../components/MainPage/ProjectSpotlight";
-import BlogSpotlight from "../../components/MainPage/BlogSpotlight";
 import Footer from "../../components/Footer";
+
+import ProjectSpotlight from "./ProjectSpotlight";
+import BlogSpotlight from "./BlogSpotlight";
 
 export default function _Main() {
   return (

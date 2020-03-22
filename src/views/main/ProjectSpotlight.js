@@ -14,17 +14,18 @@ function ProjectsPreview(props) {
   // i guess it's effectively the same as an empty array
   // because the function will never change?
   const { getPreviewProjects } = props;
+
   useEffect(() => {
     getPreviewProjects();
   }, [getPreviewProjects]);
 
-  const doLeft = event => {
+  const doLeft = () => {
     let nextImage =
       (currentImage + props.projects.length - 1) % props.projects.length;
     setCurrentImage(nextImage);
   };
 
-  const doRight = event => {
+  const doRight = () => {
     let nextImage = (currentImage + 1) % props.projects.length;
     setCurrentImage(nextImage);
   };
