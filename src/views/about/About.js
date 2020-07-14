@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 export default function About() {
   return (
@@ -31,8 +31,8 @@ export default function About() {
               </p>
               <p>
                 <strong>Libraries/Frameworks: </strong>
-                React.JS, Redux.js, Spring, Hibernate, Thunks, Firebase, Axios, Postgresql,
-                Styled-components, reactstrap, canvas, and more...
+                React.JS, Redux.js, Spring, Hibernate, Thunks, Firebase, Axios,
+                Postgresql, Styled-components, reactstrap, canvas, and more...
               </p>
             </section>
           </section>
@@ -45,54 +45,59 @@ export default function About() {
               drive organizational goals.
             </p>
             <p>
-              After moving back home to be closer to family I joined Lambda School, 
-              where I not only completed their curriculum in Computer Science and 
-              Web Development in 2019, but was also a Team Lead mentoring
-              and teaching students working their way through the curriculum.
+              After moving back home to be closer to family I joined Lambda
+              School, where I not only completed their curriculum in Computer
+              Science and Web Development in 2019, but was also a Team Lead
+              mentoring and teaching students working their way through the
+              curriculum.
             </p>
             <p>
-              In October I joined SampleServe as a Frontend Engineer. I developed React 
-              and React Native applications and worked with product management to define 
-              project needs and deliver an excellent product.
-              I championed creating a code base that could scale by focusing on 
-              separation of data and presentation layers creating easy to test, maintainable components.
+              In October 2019 I joined SampleServe as a Frontend Engineer, Where
+              I spent the last year working extensively with React, React
+              Native, and other Frontend technologies.
             </p>
           </section>
         </article>
         <article className="values">
           <section className="value-block">
-            <h3>Values</h3>
-            <p>We are what we believe. These are my most important beliefs.</p>
+            <h3>Who am I?</h3>
+            <p>
+              We are what we believe. These are the beliefs that form the core
+              of who I am.
+            </p>
           </section>
           <section className="value-content">
             <p>
-              <strong>Inclusivity </strong>
-              The amazing thing about people are their unique and powerful
-              points of view. Einstein once said. "We can not solve our problems
-              with the same level of thinking that created them" Nowhere is that
-              more clear than on a diverse and inclusive team.
+              <strong>People are kind </strong>
+              Looking at the news, and media, we love to have a bad guy. We love
+              heros more, but how does a hero exist without a villain? I believe
+              they exist in everyday acts of kindness. When I look at my sons
+              chocolate covered face, as he gestures his dirty little fingers to
+              share candy with his cousin, I see the one thing I know to be true
+              about the world. People are kind and act with the best intentions
+              they know how.
             </p>
             <p>
-              <strong>Safety </strong>
-              One of the most fundamental human needs is that of safety. When
-              all of our resources are spent on building up our walls and
-              defences none of them are spent growing past our barriers.
-              providing safety to the people around you not only allows them to
-              flourish but also allows you to grow with them.
+              <strong>Together we are more </strong>
+              As much as one person can do by themselves, a group can do so much
+              more. There is so much to learn and do in the world oen person
+              couldn't do it all. Luckily we get to share the experiences of
+              others through writings, art, music, and creating things together.
             </p>
             <p>
-              <strong>Community </strong>I believe that each one of us, has an
-              incredible intrinsic value. One of the most important things we
-              can do for each other is acknowledging that value. When one of us
-              is lifted that cascades through each of us and we're all better
-              for it.
+              <strong>Never stop moving </strong>
+              Sometimes we need to take a step back and look how far we've come,
+              but I cant do that without seeing all the people who have helped
+              me along the way. For the people who believed in me when I didn't
+              believe in myself, I will never give up, I will never stop
+              learning, I will never stop moving forward.
             </p>
           </section>
         </article>
       </section>
       <Footer />
     </Main>
-  );
+  )
 }
 
 const Main = styled.main`
@@ -107,6 +112,13 @@ const Main = styled.main`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    & > article {
+      &.about,
+      &.values {
+        width: 50%;
+      }
+    }
 
     h3 {
       color: var(--main-color);
@@ -127,6 +139,13 @@ const Main = styled.main`
 
     @media (max-width: 800px) {
       flex-direction: column;
+
+      & > article {
+        &.about,
+        &.values {
+          width: unset;
+        }
+      }
     }
 
     .con-block {
@@ -220,4 +239,4 @@ const Main = styled.main`
       }
     }
   }
-`;
+`
