@@ -52,9 +52,11 @@ export default function About() {
               curriculum.
             </p>
             <p>
-              In October 2019 I joined SampleServe as a Frontend Engineer, Where
-              I spent the last year working extensively with React, React
-              Native, and other Frontend technologies.
+              In October I joined SampleServe as a Frontend Engineer. I develop
+              React and React Native applications and work with clients to
+              identify problems and plan features. I championed code quality by
+              adding testing and modularization to increase confidence in every
+              push.
             </p>
           </section>
         </article>
